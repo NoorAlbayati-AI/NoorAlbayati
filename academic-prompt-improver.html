@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academic Prompt Improver — Noor AI Academy</title>
+<link rel="stylesheet" href="academic-prompt-improver.css">
+</head>
+<body>
+<main class="wrap">
+<header><p class="eyebrow">Noor AI Academy · AI Apps</p><h1>Academic Prompt Improver</h1><p>Turn a rough academic request into a clearer, responsible prompt without inventing sources or evidence.</p></header>
+<section class="card">
+<label for="task">Your rough request</label>
+<textarea id="task" rows="6" placeholder="Example: Help me review studies about AI and critical thinking in university students"></textarea>
+<div class="grid">
+<label>Task type<select id="type"><option>Literature review</option><option>Research planning</option><option>Paper analysis</option><option>Academic writing</option><option>Study support</option></select></label>
+<label>Academic level<select id="level"><option>Undergraduate</option><option>Master's</option><option>PhD / Researcher</option></select></label>
+<label>Output<select id="format"><option>Structured response</option><option>Table</option><option>Bullet points</option><option>Step-by-step plan</option></select></label>
+<label>Evidence rule<select id="evidence"><option value="strict">Strict — distinguish evidence from suggestions</option><option value="sources">Require verifiable sources</option><option value="none">No source requirement</option></select></label>
+</div>
+<label for="context">Optional context / constraints</label>
+<textarea id="context" rows="3" placeholder="Population, date range, discipline, word limit, exclusions..."></textarea>
+<div class="actions"><button id="build">Improve prompt</button><button id="copy" class="secondary" disabled>Copy</button><button id="clear" class="ghost">Clear</button></div>
+<p id="status" role="status" aria-live="polite"></p>
+</section>
+<section class="card output" id="outputCard" hidden><h2>Improved prompt</h2><pre id="output"></pre><p class="note">AI output should be checked against original sources before being treated as research evidence.</p></section>
+</main><script src="academic-prompt-improver.js"></script>
+</body></html>
